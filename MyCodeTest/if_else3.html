@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- find the largest number between 3 number  -->
+    <script>
+        function largnumber(num1, num2, num3) {
+            if (num1 > num2 && num1 > num3) {
+                console.log(`${num1} is the largest`);
+                alert(num1 + "  is The largest");
+            }
+            else if (num2 > num3 && num2 > num1) {
+                consol.log(`${num2}is the largest `);
+                alert(num2 + "  is The largest");
+            }
+            else if (num3 > num1 && num3 > num2) {
+                console.log(`${num3} is the largest`)
+                alert(num3 + "  is The largest");
+            }
+            else {
+                console.log(`${num1} and ${num2} and ${num3} is Equal`)
+                alert("The Numbers is Equal");
+            }
+
+
+
+
+
+        }
+        largnumber(prompt("enter first number"), prompt("enter secound number"), prompt("enter final number"))
+    </script>
+</body>
+
+</html>
