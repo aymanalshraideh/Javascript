@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        function numberChecker(num){
-           let day;
-           switch(true){
-          case num==1: 
-          day="Saturday";
-              break;
-          case num==2: 
-          day="Sunday";
-          break;
-          case num==3: 
-          day="Monday";
-          break;
-          case num==4: 
-          day="Tuesday";
-          break;
-          case num==5: 
-          day="Wednesday";
-          break;
-          case num==6: 
-          day="Thursday";
-          break;
-          case num==7: 
-          day="Friday";
-          break;
-          default:
-      day = "Undefined!! Enter  Number of Days Between 0 - 7";
-      
-      break;
+        function numberChecker(num) {
+            let day;
+            switch (true) {
+                case num == 1:
+                    day = "Saturday";
+                    break;
+                case num == 2:
+                    day = "Sunday";
+                    break;
+                case num == 3:
+                    day = "Monday";
+                    break;
+                case num == 4:
+                    day = "Tuesday";
+                    break;
+                case num == 5:
+                    day = "Wednesday";
+                    break;
+                case num == 6:
+                    day = "Thursday";
+                    break;
+                case num == 7:
+                    day = "Friday";
+                    break;
+                default:
+                    day = "Undefined!! Enter  Number of Days Between 0 - 7";
 
-           }
+                    break;
+
+            }
 
 
-alert("The day is " + day);
+            alert("The day is " + day);
 
         }
-numberChecker(prompt("Enter the number of the day"));
+        numberChecker(prompt("Enter the number of the day"));
     </script>
 </body>
+
 </html>
