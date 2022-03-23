@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>img{width: 500px; height: 500px; alt: "pic"; border: 1px solid black;}</style>
+</head>
+<body>
+    <select name="Select" id="S" onchange="myselect()">
+        <option value="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Flag_of_Jordan.svg/1200px-Flag_of_Jordan.svg.png">Jordan</option>
+        <option value="https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Palestine.svg">Pelestain</option>
+        <option value="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/1200px-Flag_of_Saudi_Arabia.svg.png">Sudi Arabia</option>
+        <option value="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/1200px-Flag_of_Russia.svg.png">Russia</option>
+    </select>
+    <br>
+    <img src="" alt="" id="i">
+    <script>
+function myselect(){
+ let m=document.getElementById("S").value;
+let imgs=document.getElementById("i");
+imgs.src=m;
+
+}
+    </script>
+</body>
+</html>
