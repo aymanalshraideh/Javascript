@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>#par{width: 500px; height: 200px; border: 1px solid black; padding:0 5%; } </style>
+    <style>
+        #par {
+            width: 500px;
+            height: 200px;
+            border: 1px solid black;
+            padding: 0 5%;
+        }
+    </style>
 </head>
+
 <body>
     <div><select name="" id="fo" onchange="font()">
-        <option value="Arial">Arial</option>
-        <option value="Serif">Serif</option>
-        <option value="Fantasy">Fantasy</option>
-    </select>
-    <select name="" id="siz" onchange="sizee()">
-        <option  value="12px">12px</option>
-        <option value="18px">18px</option>
-        <option value="22px">22px</option>
-    </select>
-    
-    <label for="" >Italic</label><input type="checkbox" value="italic" id="it" onchange="ital()">
-    <label for="">Bold</label><input type="checkbox" value="bold" id="bol" onchange="bolde()">
-    <label for="">Underline</label><input type="checkbox" value="underline" id="un" onchange="under()">
+            <option value="Arial">Arial</option>
+            <option value="Serif">Serif</option>
+            <option value="Fantasy">Fantasy</option>
+        </select>
+        <select name="" id="siz" onchange="sizee()">
+            <option value="12px">12px</option>
+            <option value="18px">18px</option>
+            <option value="22px">22px</option>
+        </select>
 
-    <div id="par">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </div>
-</div>
-<script src="Task4.js"></script>
+        <label for="">Italic</label><input type="checkbox" value="italic" id="it" onchange="ital()">
+        <label for="">Bold</label><input type="checkbox" value="bold" id="bol" onchange="bolde()">
+        <label for="">Underline</label><input type="checkbox" value="underline" id="un" onchange="under()">
+
+        <div id="par">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </div>
+    </div>
+    <script src="Task4.js"></script>
 </body>
+
 </html>
