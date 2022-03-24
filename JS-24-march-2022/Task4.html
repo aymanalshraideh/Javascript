@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*
+4
+Using the varabile persons
+Create a function called olderPerson
+that accept an object
+and return the full name of the older person
+
+Ex: olderPerson(persons) => "Soso Al-Amora"
+*/
+
+var persons = [
+  { name: { first: 'John', last: 'Hob' }, age: 35 },
+  { name: { first: 'Alex', last: 'Mercer' }, age: 25 },
+  { name: { first: 'Alice', last: 'Zaheer' }, age: 24 },
+  { name: { first: 'Zues', last: 'Odin' }, age: 55 },
+  { name: { first: 'Soso', last: 'Al-Amora' }, age: 67 }
+];
+
+
+
+function old(){
+    let index=0;
+    let s=[]
+  let m=persons[0].age
+  for(let i=0;i<persons.length;i++){
+      if(m<persons[i].age)
+      {
+        m=persons[i].age;
+        s=persons[i].name.first+persons[i].name.last;
+      }
+  }
+  return s;
+}
+console.log(old())
+
+
+
+    </script>
+</body>
+</html>

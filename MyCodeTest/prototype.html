@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function tranee(first,last, age ) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            
+           
+        }
+    
+     let tranee10=new tranee("ayman","shraideh",25)
+     tranee.prototype.nationality;
+     tranee10.nationality="joradnian" 
+     
+     
+     console.log(tranee10.nationality)
+     
+
+
+    tranee.prototype.fullname=function(){
+            
+     return this.firstName+"  "+this.lastName;
+    }
+    console.log(tranee10.fullname())
+       
+       
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // OrangeAcademytranee.prototype.fname = function () {
+        //     return this.firstName + " " + this.lastName;
+        // };
+      
+        // let tranee10 = new OrangeAcademytranee("Ayman","Al-Shraideh", "25", "swimming", "Good",);
+        // let tranee9 = new OrangeAcademytranee("Asma", "28", "writing", "very Good");
+        // // tranee10.name="mohammad";
+        // console.log(tranee10.fname());
+        // tranee9.hobby = "dancing";
+
+        // console.log(tranee9.name);
+        // console.log(tranee9.hobby);
+
+// const myFather = new Person("John", "Doe", 50, "blue");
+// const myMother = new Person("Sally", "Rally", 48, "green")
+    </script>
+</body>
+
+</html>

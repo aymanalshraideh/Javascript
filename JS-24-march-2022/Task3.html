@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Using the varabile persons
+Create a function called averageAge
+that accept an object
+and return the average age of those persons
+
+Ex: averageAge(persons) => 41.2 -->
+
+    <script>
+
+var persons = [
+  { name: { first: 'John', last: 'Hob' }, age: 35 },
+  { name: { first: 'Alex', last: 'Mercer' }, age: 25 },
+  { name: { first: 'Alice', last: 'Zaheer' }, age: 24 },
+  { name: { first: 'Zues', last: 'Odin' }, age: 55 },
+  { name: { first: 'Soso', last: 'Al-Amora' }, age: 67 }
+];
+
+
+
+function averageAge(){
+  let m=0;
+  
+  for(let i=0;i<persons.length;i++){
+     m=m+persons[i].age;
+
+  }
+    
+    return m/persons.length;
+
+}
+console.log(averageAge())
+    </script>
+</body>
+</html>
