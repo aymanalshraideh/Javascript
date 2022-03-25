@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*
+8
+Create a function called repeatChar
+that accept a string
+and return an object that represents how many times each char repeat
+** no matter it is upper case or lower case
+** Search on MDN about something can cut the string to char??
+
+Ex: repeatChar("mamababatetacedo")
+=> { m:2,  a:5, b:2, t2:, e:2, c:1, d:1, o:1}
+*/
+let r="mamababatetacedo";
+let m=r.split("");
+let o={};
+// console.log(m)
+
+function char(){
+for(let i=0;i<r.length;i++)
+{
+  if (o[m[i]]=== undefined){
+   o[m[i]]=1;
+
+  }else{
+
+    o[m[i]]++
+  }
+
+
+}
+return o;
+}
+console.log(char())
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+
+    let words = "My name is alex mercer class name B baba mama hello Hello HELLO";
+    let s = words.toLowerCase().split(" ");
+    let w = {};
+           
+    // console.log(s.length);
+    function find() {
+
+
+
+         
+
+
+      for (let i = 0; i < s.length; i++) {
+      
+        if (w[s[i]] === undefined) {
+
+          w[s[i]] = 1;
+
+        } else {
+          w[s[i]]++;
+
+        }
+
+      }
+
+
+      return w;
+    }
+    console.log(find());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function countRepeatedWords(sentence) {
+//   let words = sentence.split(" ");
+//   let wordMap = {};
+
+//   for (let i = 0; i < words.length; i++) {
+//     let currentWordCount = wordMap[words[i]];
+//     let count = currentWordCount ? currentWordCount : 0;
+//     wordMap[words[i]] = count + 1;
+//   }
+//   return wordMap;
+// }
+
+// console.log(countRepeatedWords(words));
+
+  </script>
+</body>
+
+</html>
