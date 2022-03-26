@@ -8,10 +8,28 @@
 </head>
 <body>
     <script>
-      let m=({a: 1, cat: 3}, ['a', 'cat', 'd'])
-      n=m.find()
-     console.log(m)
+/*
+9
+Create a function called selectFromObject
+that accept an object and an array
+and return an object have the key that inside the array
+Ex: selectFromObject({a: 1, cat: 3}, ['a', 'cat', 'd'])
+=>  {a: 1, cat: 3}
+*/
 
+function selectFromObject(object , array){
+    result = {};
+    for(i = 0; i < array.length; i++){
+        for (const [key , val] of Object.entries(object)) {
+        if(key == array[i]){
+            result[`${array[i]}`] = val;
+        
+    }}}
+
+    return result;
+  
+}
+console.log(selectFromObject({a: 1, cat: 3}, ['a', 'cat', 'd']));
     </script>
 </body>
 </html>
