@@ -4,20 +4,20 @@
 
 function c(){
 let s=document.getElementById("sup").value;
-localStorage.setItem("sup",s)
-document.getElementById("osup").innerHTML="Subject Name :"+localStorage.getItem("sup");
+sessionStorage.setItem("sup",s)
+document.getElementById("osup").innerHTML="Subject Name :"+sessionStorage.getItem("sup");
 
 let name = document.getElementById("des").value;
-localStorage.setItem("des", name);
-document.getElementById("odes").innerHTML = "Description :" + localStorage.getItem("des");
+sessionStorage.setItem("des", name);
+document.getElementById("odes").innerHTML = "Description :" + sessionStorage.getItem("des");
 
 let typee =document.getElementById("type").value;
-localStorage.setItem("type",typee);
-document.getElementById("otype").innerHTML="User Types:"+localStorage.getItem("type");
+sessionStorage.setItem("type",typee);
+document.getElementById("otype").innerHTML="User Types:"+sessionStorage.getItem("type");
 
 let ss=document.getElementById("tech").value;
-localStorage.setItem("tech",ss)
-document.getElementById("otech").innerHTML="Technology used:"+localStorage.getItem("tech");
+sessionStorage.setItem("tech",ss)
+document.getElementById("otech").innerHTML="Technology used:"+sessionStorage.getItem("tech");
 
 
 
