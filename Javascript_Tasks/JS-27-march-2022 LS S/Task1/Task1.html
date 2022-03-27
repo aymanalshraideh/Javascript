@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Task1.css">
+</head>
+
+<body>
+    <div id="div">
+        <form action="">
+            <label for="">Enter Your Name:</label><br>
+            <input type="text" placeholder="Example Soso" value="" id="fname" class="s"><br>
+            <label for="">Enter Your Age:</label><br>
+            <input type="number" placeholder="0" value="" id="age" class="s"><br>
+            <!-- 
+            <label for="">Male</label>
+            <input type="radio" name="gender" id="male">
+            <label for="">Female</label>
+            <input type="radio"  name="gender" id="female"><br> -->
+            <label for="">Gender:</label><br>
+             <select name="" id="gender" class="s">
+                 <option >Please chosee your gender</option>
+                 <option value="male">Male</option>
+                 <option value="female">Female</option>
+                </select><br>
+            <label for="">Brief Description of your:</label><br>
+            <input type="text" placeholder="Write here" value="" id="brief" class="s"><br>
+            <label for="">Enter Your Major:</label><br>
+            <input type="text" placeholder="Your Major" value="" id="major" class="s"><br>
+            <label for="">Enter Your University:</label><br>
+            <input type="text" placeholder="Name of the University" value="" id="nameU" class="s"><br>
+            <label for="">Birth Date:</label><br>
+            <input type="date" placeholder="" value="" id="date" class="s"><br>
+            <label for="">Programing Languge You Know</label><br>
+            <input type="text" placeholder="c++ c# Java ......" value="" id="languge" class="s"><br>
+            <label for="">Put your Image</label><br>
+            <input type="file" value="" id="img"><br>
+            <label for="">Siblings number and brief of them</label><br>
+            <input type="number" placeholder="0 " value="" id="brothernum" class="s"><br>
+            <input type="text" id="brotherbrief" value="" class="s"> <br>
+            <input type="button" value="sup" onclick="sup()" class="s">
+            
+        </form>
+    </div>
+    <div id="out">
+      <h1 id="ofname"></h1>
+      <h1 id="oage"></h1> 
+      <p id="ogender"></p> 
+      <p id="obrief"></p>
+      <p id="omajor"></p>
+      <p id="onameU"></p>
+      <p id="odate"></p>
+      <p id="olanguge"></p>
+      <p id="obrothernum"></p>
+      <p id="obrotherbrief"></p>
+      <img src="" alt="" id="oimg" >
+    </div>
+    <script src="Task1.js"></script>
+</body>
+
+</html>

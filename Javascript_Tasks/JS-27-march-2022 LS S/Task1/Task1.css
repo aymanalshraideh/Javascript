@@ -1,0 +1,12 @@
+#div {width: 50%; background-color: blanchedalmond;
+}
+#div form {display: block; 
+    
+    
+    margin: 1% 0;}
+
+    #div  form label{margin:10px 0;}
+   
+    .s{width: 50%; height: 5vh;}
+    body{display: flex;}
+    #out{ background-color: aquamarine;}
