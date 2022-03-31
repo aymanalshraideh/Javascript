@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 0 25%;
+            width: 50%;
+        }
+
+        form {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form>
+            <label for="">First Name:</label><input type="text" placeholder="First Name" onchange="Fname()" value=""
+                id="fname">
+            <label for="" id="label1"></label>
+            <label for="">Last Name:</label><input type="text" placeholder="Last Name" onchange="lname()" value=""
+                id="llname">
+            <label for="" id="label2"></label>
+            <label for="">Birthday:</label>
+            <input type="date" id="bdate"> <label for="" id="la"></label>
+            <label for="">Email:</label>
+            <input type="email" placeholder="example@mail.com" onchange="fmail()" id="fma">
+            <label for="" id="label3"></label>
+            <label for="">confirm Email:</label>
+            <input type="email" placeholder="example@mail.com" id="lmai" onchange="lmail()">
+            <label for="" id="label4"></label>
+            <label for="">Password:</label>
+            <input type="password" placeholder="at least 8 digits" id="ffpass" onchange="fpass()">
+            <label for="" id="label5"></label>
+            <label for="">confirm Password:</label>
+            <input type="password" onchange="lpass()" id="llpass">
+            <label for="" id="label6"></label>
+            <input type="button" value="Submet" onchange="sub()">
+        </form>
+    </div>
+    <script>
+        let l1 = document.getElementById("label1");
+        let l2 = document.getElementById("label2");
+        let l3 = document.getElementById("label3");
+        let l4 = document.getElementById("label4");
+        let l5 = document.getElementById("label5");
+        let l6 = document.getElementById("label6");
+        function Fname() {
+
+            let fn = document.getElementById("fname").value;
+
+            var letters = /^[A-Za-z]+$/;
+            if (fn.match(letters)) {
+                l1.innerHTML = ' accepted'
+                l1.style.color = "green";
+                return true;
+            }
+            else {
+                l1.innerHTML = 'Please input  characters only'
+                l1.style.color = "red";
+                return false;
+            }
+        }
+
+
+        function lname() {
+
+
+            let ln = document.getElementById("llname").value;
+            var letters = /^[A-Za-z]+$/;
+            if (ln.match(letters)) {
+                l2.innerHTML = ' accepted'
+                l2.style.color = "green";
+                return true;
+            }
+            else {
+                l2.innerHTML = 'Please input  characters only'
+                l2.style.color = "red";
+                return false;
+            }
+        }
+        function fmail() {
+            let l3 = document.getElementById("label3");
+            let fm = document.getElementById("fma").value;
+            let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (fm.match(mailformat)) {
+                l3.innerHTML = ' accepted'
+                l3.style.color = "green";
+                return true;
+
+            } else { l3.innerHTML = 'Please input  a valid Email'; 
+            l3.style.color = "red";}
+
+        }
+        function lmail() {
+            let fm = document.getElementById("fma").value;
+            let lm = document.getElementById("lmai").value;
+            if (fm == lm) {
+
+                l4.innerHTML = ' accepted'
+                l4.style.color = "green";
+            } else {
+                document.getElementById("label4").innerHTML = 'Please input  a valid Email'
+                l4.style.color = "red";
+            }
+
+        }
+
+
+        function fpass() {
+            let p1 = document.getElementById("ffpass").value;
+            if (p1.length < 6) {
+                l5.innerHTML = "Too Short";
+                l5.style.color = "red";
+            } else { l5.innerHTML = ' accepted'; l5.style.color = "green"; }
+        }
+        function lpass() {
+            let p2 = document.getElementById("llpass").value;
+            let p1 = document.getElementById("ffpass").value;
+            if (p2 != p1) {
+                l6.innerHTML = "The Two Password don't match";
+                l6.style.color = "red";
+            } else {
+                l6.innerHTML = ' accepted';
+                l6.style.color = "green";
+            }
+        }
+
+
+    // if (fn==ln){
+    //     document.getElementById("label1").innerHTML="The name is Valid"
+    // }else{document.getElementById("label1").innerHTML="The name is Valid" }
+
+    //  let fn=  document.getElementById("fname").value;
+    //  console.log(fn)
+    </script>
+</body>
+
+</html>

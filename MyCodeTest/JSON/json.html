@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="data">
+        <div id="name"></div>
+        <div id="age"></div>
+    </div>
+    <script>
+
+
+
+        let myJsonObject = '{"username":"Ayman","Age":"26"}';
+        let myJsObject = JSON.parse(myJsonObject); //JSON >>>>>>>> Object
+        console.log(myJsonObject);
+        console.log(typeof myJsonObject)
+
+        console.log(myJsObject);
+        console.log(typeof myJsObject);
+
+        // let myJsObject={"username":"Ayman","Age":"26"};
+        // let myJsonObject=JSON.stringify(myJsObject); //Object >>>>>>>> JSON
+        // console.log(myJsObject);
+        // console.log(typeof myJsObject);
+
+
+        // console.log(myJsonObject);
+        // console.log(typeof myJsonObject)
+
+
+document.getElementById("name").innerHTML="My name is:"+ myJsObject.username;
+document.getElementById("age").innerHTML="My age is:"+myJsObject.Age;
+
+
+    </script>
+</body>
+
+</html>
