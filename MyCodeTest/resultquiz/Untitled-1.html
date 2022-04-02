@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    #myVideo {
+        /*width: 100vw;*/
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    body {
+
+        justify-content: center;
+
+        background-color: #b8c6db;
+
+
+        font-family: 'Poppins', sans-serif;
+
+
+        height: 100vh;
+
+        margin: 0;
+    }
+
+    .quiz-container {
+        background-color: rgba(255, 255, 255, 0.249);
+        border-radius: 10px;
+        box-shadow: -1px 1px 20px 20px #333;
+        width: 600px;
+
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    }
+
+    #quiz {
+        box-shadow: -1px 1px 20px 20px #333;
+        color: whitesmoke;
+    }
+
+    .quiz-header {
+        padding: 4rem;
+    }
+
+    h2 {
+        padding: 1rem;
+        text-align: center;
+        margin: 0;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    ul li {
+        font-size: 1.2rem;
+        margin: 1rem 0;
+    }
+
+    ul li label {
+        cursor: pointer;
+    }
+
+    .qu {
+        margin: 3% 0;
+    }
+
+    #show {
+        width: 80%;
+        margin: 10px 10%;
+        background-color: crimson;
+    }
+
+
+
+    @media screen and (max-width: 479px) {
+
+        #myVideo {
+            /*width: 100vw;*/
+            height: 150vh;
+            width: 100%;
+            object-fit: cover;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+    }
+
+    @media screen and (max-width: 768px) and (min-width: 425px) {
+
+        #myVideo {
+            /*width: 100vw;*/
+            height: 150vh;
+            width: 100%;
+            object-fit: cover;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+    }
+</style>
+
+<body>
+
+    <!-- <div>
+        <video autoplay muted loop id="myVideo">
+            <source src="a.mp4" type="video/mp4">
+
+        </video>
+    </div> -->
+
+    <section id="Home">
+
+        <div class="quiz-container">
+            <div>
+                <input type="button" id="show" onclick="show()" value="Show Answers">
+
+                <input type="button" name="" id="" value="Finsh" onclick="finsh()">
+            </div>
+            <div class="quiz-header">
+                <h2 id="question">Araa</h2>
+                <div id="aa"></div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <script>
+        let h = document.getElementById("aa");
+
+
+
+        function show() {
+
+
+
+            var xreq = new XMLHttpRequest();
+            xreq.open("GET", "data.json");
+            xreq.onload = function () {
+                let question = JSON.parse(xreq.responseText)
+
+                let count = 0;
+                console.log(question[0].answer_1)
+                for (let i = 0; i < question.length; i++) {
+                    h.innerHTML += `<div class="qu">
+                         <h3>${(i + 1) + "-" + question[i].question} </h3> <br> 
+                         <h5 id="a${i}"> ${"a-" + question[i].answer_1}</h5> <br>
+                         <h5 id="b${i}">   ${"b-" + question[i].answer_2} </h5><br>
+                         <h5 id="c${i}">   ${"c-" + question[i].answer_3}</h5> <br>
+                         <h5 id="d${i}">   ${"d-" + question[i].answer_4}</h5> </div>`
+                         for(let j=0;j<4;j++){
+                    if (sessionStorage.getItem(i + 1) === question[i].correct) {
+                        count++;
+                        
+                            if (question[i].correct === question[i].answer_1) {
+                                document.getElementById(`a${i}`).style.color="green";
+                                
+                            }
+                            
+                            if (question[i].correct === question[i].answer_2) {
+                                document.getElementById(`b${i}`).style.color="green";
+                                
+                            }
+                            
+                            if (question[i].correct === question[i].answer_3) {
+                                document.getElementById(`c${i}`).style.color="green";
+                                
+                            }
+                            
+                            if (question[i].correct === question[i].answer_4) {
+                                document.getElementById(`d${i}`).style.color="green";
+                                
+                            }}
+                        
+                    }
+                }
+                let avg = count / 20
+                document.getElementById("show").disabled = true;
+                
+            }
+
+            xreq.send();
+
+        }
+
+    </script>
+</body>
+
+</html>
