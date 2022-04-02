@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="pr.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    #myVideo {
+        /*width: 100vw;*/
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    body {
+        background-color: #b8c6db;
+
+        
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+    }
+
+    .quiz-container {
+        background-color: rgba(255, 255, 255, 0.249);
+        border-radius: 10px;
+       box-shadow: -1px 1px 20px 20px #333;
+        width: 600px;
+       
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    }
+#quiz{
+    box-shadow: -1px 1px 20px 20px #333;
+    color: whitesmoke;
+}
+    .quiz-header {
+        padding: 4rem;
+    }
+
+    h2 {
+        padding: 1rem;
+        text-align: center;
+        margin: 0;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    ul li {
+        font-size: 1.2rem;
+        margin: 1rem 0;
+    }
+
+    ul li label {
+        cursor: pointer;
+    }
+
+    
+
+ 
+
+ 
+    
+
+    @media screen and (max-width: 479px) {
+       
+        #myVideo {
+        /*width: 100vw;*/
+        height: 150vh;
+        width: 100%;
+        object-fit: cover;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+     
+
+    @media screen and (max-width: 768px) and (min-width: 425px) {
+       
+        #myVideo {
+        /*width: 100vw;*/
+        height: 150vh;
+        width: 100%;
+        object-fit: cover;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+       
+    }}
+</style>
+
+<body>
+    <div>
+        <video autoplay muted loop id="myVideo">
+            <source src="a.mp4" type="video/mp4">
+
+        </video>
+    </div>
+    <section id="Home">
+
+        <div class="quiz-container" id="quiz">
+            <div class="quiz-header">
+                <h2 id="question">Question text</h2>
+                <ul>
+                    <li>
+                        <input type="radio" name="answer" id="a" class="answer">
+                        <label for="a" id="a_text">Question</label>
+                    </li>
+
+                    <li>
+                        <input type="radio" name="answer" id="b" class="answer">
+                        <label for="b" id="b_text">Question</label>
+                    </li>
+
+                    <li>
+                        <input type="radio" name="answer" id="c" class="answer">
+                        <label for="c" id="c_text">Question</label>
+                    </li>
+
+                    <li>
+                        <input type="radio" name="answer" id="d" class="answer">
+                        <label for="d" id="d_text">Question</label>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    </div>
+
+
+</body>
+
+</html>
