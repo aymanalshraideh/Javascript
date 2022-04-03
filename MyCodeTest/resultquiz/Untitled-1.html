@@ -13,7 +13,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <style>
-    * {
+    * {font-family: 'BIZ UDPMincho', serif;
         box-sizing: border-box;
     }
 
@@ -49,7 +49,7 @@
         background-color: rgba(255, 255, 255, 0.249);
         border-radius: 10px;
         box-shadow: -1px 1px 20px 20px #333;
-        width: 600px;
+        width: 100%;
 
         box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
         box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
@@ -65,72 +65,71 @@
     }
 
     h2 {
+        padding: 5%;
+    }
+
+    h3 {
+
+        border: #333 solid 1px;
+        padding: 10%;
+        background-color: rgba(255, 255, 255, 0.333);
+    }
+
+    h5 { background-color: rgba(255, 255, 255, 0.333);
+        text-shadow: 2px 2px rgba(255, 255, 255, 0.468);
         padding: 1rem;
         text-align: center;
         margin: 0;
+        border: 1px solid white;
+        font-size: large;
+        font-weight: bold;
     }
 
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
 
-    ul li {
-        font-size: 1.2rem;
-        margin: 1rem 0;
-    }
 
-    ul li label {
-        cursor: pointer;
-    }
-
-    .qu {
+    .qu { background-color: rgba(255, 255, 255, 0.249);
+        border-radius: 10px;
+       box-shadow: 0px -1px 20px 0px #333;
+       
+       
+        
         margin: 3% 0;
     }
 
-    #show {
+    #show {    
+        font-size: xx-large;
+        height: 90px;
         width: 80%;
         margin: 10px 10%;
-        background-color: crimson;
+        background-color: rgb(77, 77, 77);
+        color: white;
+    }
+
+    #show:hover {
+        background-color: white;
+        color: #333;
+    }
+
+    section {
+        margin: 10px 25% 0;
     }
 
 
-
     @media screen and (max-width: 479px) {
-
-        #myVideo {
-            /*width: 100vw;*/
-            height: 150vh;
-            width: 100%;
-            object-fit: cover;
-            position: fixed;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            z-index: -1;
-        }
+        
+        section {
+        margin: 0;
+    }
+     
     }
 
     @media screen and (max-width: 768px) and (min-width: 425px) {
 
-        #myVideo {
-            /*width: 100vw;*/
-            height: 150vh;
-            width: 100%;
-            object-fit: cover;
-            position: fixed;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            z-index: -1;
-        }
-
+       
     }
 </style>
 
-<body>
+<body id="body">
 
     <!-- <div>
         <video autoplay muted loop id="myVideo">
@@ -143,12 +142,12 @@
 
         <div class="quiz-container">
             <div>
-                <input type="button" id="show" onclick="show()" value="Show Answers">
+                <input type="button" id="show" onclick="show()" value="Show The result">
 
-                <input type="button" name="" id="" value="Finsh" onclick="finsh()">
+
             </div>
             <div class="quiz-header">
-                <h2 id="question">Araa</h2>
+                <h2 id="mark"></h2>
                 <div id="aa"></div>
             </div>
 
@@ -162,8 +161,8 @@
 
     <script>
         let h = document.getElementById("aa");
-
-
+        let body = document.getElementById("body");
+        let m = document.getElementById("mark");
 
         function show() {
 
@@ -183,35 +182,91 @@
                          <h5 id="b${i}">   ${"b-" + question[i].answer_2} </h5><br>
                          <h5 id="c${i}">   ${"c-" + question[i].answer_3}</h5> <br>
                          <h5 id="d${i}">   ${"d-" + question[i].answer_4}</h5> </div>`
-                         for(let j=0;j<4;j++){
                     if (sessionStorage.getItem(i + 1) === question[i].correct) {
                         count++;
-                        
+                    }
+                    for (let j = 0; j < 4; j++) {
+                        if (question[i].correct === question[i].answer_1) {
+                            document.getElementById(`a${i}`).style.background = "green";
+
+                        }
+
+                        if (question[i].correct === question[i].answer_2) {
+                            document.getElementById(`b${i}`).style.background = "green";
+
+                        }
+
+                        if (question[i].correct === question[i].answer_3) {
+                            document.getElementById(`c${i}`).style.background = "green";
+
+                        }
+
+                        if (question[i].correct === question[i].answer_4) {
+                            document.getElementById(`d${i}`).style.background = "green";
+
+                        }
+                        if (sessionStorage.getItem(i + 1) === question[i].correct) {
+
+
                             if (question[i].correct === question[i].answer_1) {
-                                document.getElementById(`a${i}`).style.color="green";
-                                
+                                document.getElementById(`a${i}`).style.background = "green";
+
                             }
-                            
+
                             if (question[i].correct === question[i].answer_2) {
-                                document.getElementById(`b${i}`).style.color="green";
-                                
+                                document.getElementById(`b${i}`).style.background = "green";
+
                             }
-                            
+
                             if (question[i].correct === question[i].answer_3) {
-                                document.getElementById(`c${i}`).style.color="green";
-                                
+                                document.getElementById(`c${i}`).style.background = "green";
+
                             }
-                            
+
                             if (question[i].correct === question[i].answer_4) {
-                                document.getElementById(`d${i}`).style.color="green";
-                                
-                            }}
-                        
+                                document.getElementById(`d${i}`).style.background = "green";
+
+                            }
+                        } else {
+                            if (sessionStorage.getItem(i + 1) === question[i].answer_1) {
+                                document.getElementById(`a${i}`).style.background = "red";
+
+
+
+                            }
+
+                            if (sessionStorage.getItem(i + 1) === question[i].answer_2) {
+                                document.getElementById(`b${i}`).style.background = "red";
+
+                            }
+
+                            if (sessionStorage.getItem(i + 1) === question[i].answer_3) {
+                                document.getElementById(`c${i}`).style.background = "red";
+
+                            }
+
+                            if (sessionStorage.getItem(i + 1) === question[i].answer_4) {
+                                document.getElementById(`d${i}`).style.background = "red";
+
+                            }
+                        }
+
                     }
                 }
-                let avg = count / 20
+
+                if (count >= 10) {
+                    m.innerHTML = `Congratulations, you passed the test successfully <br> your mark is ${count}/20`
+                    m.style.color = "green"
+
+                } else {
+                    m.innerHTML = `Unfortunately, you did not fulfill our requirements, Good Luck<br>     your mark is ${count}/20`
+                    m.style.color = "red"
+
+
+                }
+
                 document.getElementById("show").disabled = true;
-                
+
             }
 
             xreq.send();
