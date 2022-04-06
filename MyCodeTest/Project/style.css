@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.qyiz-app{
+    margin: 20px auto;
+    width: 800px;
+    background-color: antiquewhite;
+    padding: 15px;
+}
+.quiz-app .quiz-info{
+    display: flex;
+    background-color: aliceblue;
+    padding: 20px;
+}
+.quiz-app .quiz-info .category{
+    flex: 1;
+
+}
+.quiz-app .quiz-info .count{
+    flex: 1;
+    text-align: right;
+}
+.quiz-app .quiz-area{
+    background-color: aliceblue;
+    padding: 20px 20px 0 ;
+    margin-top: 15px;
+}
+.quiz-app .quiz-area h2{margin: 0;}
+.quiz-app .answers-area{
+    background-color: aliceblue;
+    padding: 20px;
+
+}
+.quiz-app .answers-area .answer{
+    background-color: bisque;
+    padding: 15px;
+}
+.quiz-app .answers-area .answer:not(:last-child){
+    border-bottom: 1px soled skyblue; 
+
+}
+.quiz-app .answers-area .answer input[type="Radio"]:checked+label{
+    color: slategrey ;}
+    .quiz-app .answers-area .answer label{
+       cursor: pointer;
+       font-weight: bold;
+       color: blueviolet;
+       font-size: 14px;
+       margin-left: 5px;
+       position: relative;
+       top: -1px; 
+    }
+    .quiz-app .submit-btn{
+        background-color: blue;
+        display: block;
+        width: 100%;
+        padding: 15px ;
+        border: none;
+        font-weight: bold;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 6px;
+        margin: 20px auto;
+    }
+    .quiz-app .submit-btn:focus{
+        outline: none;
+    }
+    .quiz-app .bukkets{
+        border-top: 1px solid skyblue;
+        background-color: beige;
+        display: flex;
+        padding: 20px;
+
+    }
+    .quiz-app .bukkets .spans{
+        flex: 1;
+        display: flex;
+    }
+    .quiz-app .bukkets .spans span{
+        width: 20px;
+        height: 20px;
+        background-color: rgb(160, 116, 58);
+        margin-right: 5px;
+        border-radius: 50%;
+
+    }
+    .quiz-app .bukkets .spans  .on{
+        background-color: blue;
+    }
+    .quiz-app .results span{
+        font-weight: bold;
+    }
