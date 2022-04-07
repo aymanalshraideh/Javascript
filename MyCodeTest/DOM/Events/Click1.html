@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="textInput" type="text" placeholder="Enter Text">
+    <button id="enter">Enter</button>
+    <ul>
+        <!-- <li class="">Irbid</li>
+        <li class="">Amman</li>
+        <li class="">Aqaba</li>
+        <li class="">Ajloun</li>
+        <li class="">Maan</li> -->
+    </ul>
+    <script>
+        let inputtext = document.getElementById("textInput");
+        let enter = document.getElementById("enter");
+        let ul = document.querySelector("ul")
+        enter.addEventListener("click", function () {
+            if (inputtext.value.length > 0) {
+                var li = document.createElement("li");
+                li.appendChild(document.createTextNode(inputtext.value));
+                ul.appendChild(li);
+                inputtext.value = ""
+            }
+        })
+        inputtext.addEventListener("keypress", function (event) {
+
+            if (inputtext.value.length > 0 && event.keyCode === 13) {// https://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes //for keycode
+                var li = document.createElement("li");
+                li.appendChild(document.createTextNode(inputtext.value));
+                ul.appendChild(li);
+                inputtext.value = "";
+            }
+        })
+
+    </script>
+</body>
+
+</html>
