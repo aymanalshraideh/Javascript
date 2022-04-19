@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user ={
+            firstname:"Ayman",
+            lastname:"Shraideh",
+            age:25,
+            carsColor:{
+            BMW:"black",
+            Mercedes:"White",
+            myCarsColors:function(){
+                return `My Cars Colors : ${user.carsColor.BMW}& ${user.carsColor.Mercedes}`
+            }
+            },
+            gitAgeinDay:()=> `${user.age*360}`,//Arrow Function
+gitAgeinHours:()=>{
+    let s=user.gitAgeinDay();
+    let hours=s*24
+    return `The Age of hours:${hours}`} 
+,
+
+gitfullname: function(){
+    return `Full name:${user.firstname}${user.lastname}`;
+
+}
+        }
+        console.log(user.gitfullname())
+        console.log(user.gitAgeinDay())
+        console.log(user.carsColor.BMW)
+        console.log(user.carsColor.myCarsColors())
+        console.log(user.gitAgeinHours())
+    </script>
+</body>
+</html>

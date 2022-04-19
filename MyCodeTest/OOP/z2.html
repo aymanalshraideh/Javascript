@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let myObject1={
+            "one":1,
+            "two":2
+        }
+        console.log(myObject1.one)
+        console.log(myObject1["two"])
+
+        let myObject2={
+            1:"One",
+            2:"Two"
+        }
+        // console.log(myObject2.1) Syntax Error
+        console.log(myObject2["1"])
+        console.log(myObject2["2"])
+
+
+
+        let myVariable="name";
+        let v={
+         name:"Ayman"
+        }
+        console.log(v.name)
+        console.log(v[myVariable])
+
+
+let h=new Object();
+h.first="Ayman";
+h.Secound="Adnan";
+h.last="Al-Shraideh";
+
+let fullname =()=>{return `Full Name: ${h.first} ${h.Secound} ${h.last}`};
+console.log(fullname())
+    </script>
+</body>
+</html>
