@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="show"></div>
+    <script>
+       let ss= document.getElementById("show");
+        const me={
+            name:"Ayman",
+            age:"25",
+            contry:"Jordan"
+        };
+        for(let ana in me){
+            console.log(ana)
+        }
+        console.log("#".repeat(15))
+
+        for(let ana in me){
+            console.log(me[ana])
+        }
+        
+        console.log("#".repeat(15))
+
+        for(let ana in me){
+            console.log(ana,me[ana])
+        }
+        console.log("#".repeat(15))
+
+        for(let ana in me){
+            console.log(`The ${ana} => ${me[ana]}`)
+        }
+        console.log("#".repeat(15))
+       let m='';
+        for(let ana in me){
+        //   console.log(ana,me[ana])
+          m+=` <h1>The ${ana} => ${me[ana]}</h1> `
+        }
+        console.log(m)
+        ss.innerHTML=m;
+    </script>
+</body>
+</html>

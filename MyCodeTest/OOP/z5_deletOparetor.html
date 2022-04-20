@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let address={
+            jordan:"Amman"
+        }
+        console.log(address)
+        console.log(address.jordan)
+
+        let address2={
+            jordan:"Irbid"
+        }
+        console.log(delete address2.jordan)
+        console.log(address2)
+        console.log(address2.jordan)
+
+        console.log("#".repeat(20))
+        const freezbj=Object.freeze({age:25})
+        console.log(freezbj);
+        console.log(freezbj.age)
+
+         console.log(delete freezbj.age)
+
+        console.log(freezbj);
+        console.log(freezbj.age)
+
+        console.log("#".repeat(20))
+        
+        const eObj={};
+        Object.defineProperty(eObj,"a",{value:1,configurable:true})
+         console.log(eObj)
+         console.log(eObj.a)
+
+         console.log(delete eObj.a)
+
+         console.log(eObj)
+         console.log(eObj.a)
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function User(Fname,lName,Age,Country){
+            this.Fname=Fname;
+            this.lName=lName;
+            this.Age=Age;
+            this.Country=Country;
+            this.FullName=()=>{
+                return `Full Name is ${this.Fname} ${this.lName}`
+            }
+        }
+        let user1=new User("Ayman","Al-Shraideh",25,"Jordan")
+        // user1.Country="Jordan"
+        let user2=new User("Mohammad","AlShraide",21,"Turki")
+        // user2.Country="Amman";
+        console.log(user1)
+        console.log(user2.FullName())
+    </script>
+</body>
+</html>

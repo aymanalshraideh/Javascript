@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function User(name , email, age,showemail){
+            this.name=name;
+            this.email=email;
+            this.age=age;
+            this.update=(newName)=>{
+                if(this.age>17){
+                    ` Your name is ${this.name=newName}`
+                }else{
+                   console.log("You cant update your name")
+                }
+                
+            }
+            this.showemail=()=>{
+                if(showemail===true){
+                    return `Email is ${this.email}`
+                }
+                else{
+                    return `This Data is Praivate`
+                }
+            }
+        }
+
+        let user1=new User("Ayman","ayman@ss.ss",17,true)
+        console.log(user1.name);
+
+        user1.update("Ahmad")
+        console.log(user1.name)
+        console.log(user1.email)
+        console.log(user1.showemail())
+    </script>
+</body>
+</html>

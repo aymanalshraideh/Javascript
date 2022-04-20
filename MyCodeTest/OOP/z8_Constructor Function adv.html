@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Phone(name){
+            console.log(this)
+            this.name=name;
+        }
+        let phone1=new Phone("Nokia");
+        let phone2=new Phone("Samsung");
+        let phone3=Phone("Huawi")
+        console.log(phone1.name);
+        console.log(phone2.name);
+        console.log(window.name);
+        
+
+        console.log("~".repeat(10));
+        console.log(phone1 instanceof Phone);
+        console.log(phone2 instanceof Phone);
+        console.log(phone3 instanceof Phone);
+        console.log("~".repeat(10));
+        console.log(phone1.constructor=== Phone);
+        console.log(phone2.constructor=== Phone);
+        // console.log(phone3.constructor=== Phone); Error
+    </script>
+</body>
+</html>
