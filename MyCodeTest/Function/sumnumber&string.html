@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=[1,2,2,"ddd",3,"ayman",5,6]
+        function sums(){
+            let m=[];
+            let n=[];
+           let sum=0;
+            for(let i=0;i<arr.length;i++){
+             if(typeof arr[i]=="number" ){
+                 sum+=arr[i]
+                 n.push(arr[i])
+                }
+             else{
+              m.push(arr[i])
+             }
+
+            }
+            return `The number in Array is: ${n} the string in Array is :${m}`;
+        }
+        console.log(sums())
+  console.log(typeof arr[3])
+  console.log(typeof arr[0])
+
+    </script>
+</body>
+</html>

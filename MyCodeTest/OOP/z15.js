@@ -14,6 +14,9 @@ class User {
     return `You are a User`
 
    }
+   ChangName(newName){
+       this.name=newName;
+   }
 }
 
 class Admin extends User{
@@ -37,4 +40,9 @@ console.log(user1.adminMssg())
 console.log(user1.writeMssg())
 console.log(user2.writeMssg())
 console.log(user2.sayHello())
+
+
+
 // console.log(user2.adminMssg()) Error because he is not Admin
+user1.ChangName("Ahmad")
+console.log(user1.name)
